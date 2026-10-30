@@ -445,7 +445,7 @@ export class Manager implements EventProviderFactory {
     } else {
       (this._config as any) = undefined;
       console.warn("Failed to initialise the manager");
-      if (!manager.isError) {
+      if (!this.isError) {
         // If no specific error got set during initialization, fall back to MANAGER_FAILED_TO_LOAD
         this._setError(ORError.MANAGER_FAILED_TO_LOAD);
       }
