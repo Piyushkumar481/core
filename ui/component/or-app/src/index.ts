@@ -323,6 +323,8 @@ export class OrApp<S extends AppStateKeyed> extends OrElement {
         router.resolve();
       } else if (manager.isError) {
         showErrorDialog(this.shadowRoot!, "managerError." + manager.error);
+      } else {
+        console.debug("Something went wrong during manager initialization.");
       }
     });
   }
